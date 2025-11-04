@@ -1,0 +1,14 @@
+# Ignora la cache locale di Terraform e Terragrunt
+.terraform/
+.terragrunt-cache/
+
+# Ignora i file di stato locali (PERICOLOSO committarli!)
+*.tfstate
+*.tfstate.*
+
+# Ignora i log di crash
+crash.log
+
+# Ignora file specifici del sistema operativo
+.DS_Store
+Thumbs.db
