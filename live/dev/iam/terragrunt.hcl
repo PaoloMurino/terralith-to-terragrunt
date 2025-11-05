@@ -24,7 +24,7 @@ dependency "ddb" {
   mock_outputs_merge_strategy_with_state  = "shallow"
 
   mock_outputs = {
-    arn = "arn:aws:dynamodb:us-east-1:123456789012:table/mock-table-name"
+    arn = "arn:aws:dynamodb:eu-south-1:123456789012:table/mock-table-name"
   }
 }
 
