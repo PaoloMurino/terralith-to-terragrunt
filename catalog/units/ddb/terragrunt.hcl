@@ -7,5 +7,5 @@ terraform {
 }
 
 inputs = {
-  name = "best-cat-2025-11-03-2001-dev"
+  name = values.name
 }

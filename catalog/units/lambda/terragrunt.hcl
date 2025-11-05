@@ -7,7 +7,7 @@ terraform {
 }
 
 dependency "s3" {
-  config_path = "../s3"
+  config_path = values.s3_path
 
   mock_outputs_allowed_terraform_commands = ["plan", "state"]
   mock_outputs_merge_strategy_with_state  = "shallow"
@@ -18,7 +18,7 @@ dependency "s3" {
 }
 
 dependency "ddb" {
-  config_path = "../ddb"
+  config_path = values.ddb_path
 
   mock_outputs_allowed_terraform_commands = ["plan", "state"]
   mock_outputs_merge_strategy_with_state  = "shallow"
@@ -29,7 +29,7 @@ dependency "ddb" {
 }
 
 dependency "iam" {
-  config_path = "../iam"
+  config_path = values.iam_path
 
   mock_outputs_allowed_terraform_commands = ["plan", "state"]
   mock_outputs_merge_strategy_with_state  = "shallow"
@@ -40,9 +40,9 @@ dependency "iam" {
 }
 
 inputs = {
-  name = "best-cat-2025-11-03-2001"
+  name = values.name
 
-  aws_region = "eu-south-1"
+  aws_region = values.aws_region
 
   s3_bucket_name      = dependency.s3.outputs.name
   dynamodb_table_name = dependency.ddb.outputs.name
