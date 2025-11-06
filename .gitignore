@@ -1,6 +1,7 @@
 # Ignora la cache locale di Terraform e Terragrunt
 .terraform/
 .terragrunt-cache/
+.terragrunt-stack/
 
 # Ignora i file di stato locali (PERICOLOSO committarli!)
 *.tfstate
